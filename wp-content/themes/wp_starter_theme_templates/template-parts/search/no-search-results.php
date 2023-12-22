@@ -1,0 +1,1 @@
+<div class="no-search-results">No search results</div>

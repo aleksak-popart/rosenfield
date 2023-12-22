@@ -1,0 +1,17 @@
+.home-test {
+  padding-top: 160px;
+  .swiper-slide {
+    @extend .roboto-16-normal;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    &:nth-child(odd) {
+      background: #0e2eaf;
+    }
+    &:nth-child(even) {
+      background: #08f;
+    }
+  }
+}

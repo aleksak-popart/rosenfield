@@ -1,0 +1,62 @@
+html {
+  @include mq($menuBreakpoint) {
+    &.open {
+      overflow: hidden;
+    }
+  }
+}
+
+body {
+  background-color: #eee;
+}
+
+// .offscreen {
+//   border: 0;
+//   clip: rect(0 0 0 0);
+//   height: 1px;
+//   margin: -1px;
+//   overflow: hidden;
+//   padding: 0;
+//   position: absolute;
+//   width: 1px;
+// z}
+
+.skip-link {
+  position: absolute;
+  z-index: 999;
+  height: 0;
+  overflow: hidden;
+
+  &:focus {
+    height: auto;
+  }
+}
+
+.line-link {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: $grey;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    will-change: transform;
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+  }
+  &:hover {
+    &::after {
+      transform-origin: 0% 50%;
+      transform: scale3d(1, 1, 1);
+      transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+    }
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}

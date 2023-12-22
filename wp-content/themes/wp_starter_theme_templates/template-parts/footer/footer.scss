@@ -1,0 +1,18 @@
+.footer {
+  @extend .roboto-16-normal;
+  margin: to-vw(30);
+  margin-top: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: $grey;
+  color: $white;
+  a {
+    @extend .line-link;
+    color: $yellow;
+    &::after {
+      background-color: $yellow;
+    }
+  }
+}

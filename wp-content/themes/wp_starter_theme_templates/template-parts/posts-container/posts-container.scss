@@ -1,0 +1,25 @@
+.posts-container {
+  padding-top: 150px;
+}
+
+.posts-container_btn-load-more {
+  &.hide {
+    visibility: hidden;
+  }
+  .loading & {
+    opacity: 0.5;
+  }
+}
+
+.posts-container_filters-list {
+  display: flex;
+  align-items: center;
+}
+
+.posts-container_filters-link {
+  color: $grey;
+  margin: 5px 5px 5px 0;
+  &.active {
+    color: #f00;
+  }
+}
